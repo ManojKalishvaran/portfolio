@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manoj K | Data Scientist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6, #d946ef);
+            --gradient-secondary: linear-gradient(135deg, #3b82f6, #2dd4bf);
+            --dark-bg: #0f172a;
+            --darker-bg: #020617;
+            --light-text: #f8fafc;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            height: 4px;
+            width: 60px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 70%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
+        }
+        
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: var(--light-text);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* About Section */
+        .section {
+            padding: 6rem 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text {
+            position: relative;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-tag {
+            background: var(--glass-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-3px);
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+        
+        .about-stats {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .about-stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.1), transparent 70%);
+            z-index: -1;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+        
+        /* Projects Section */
+        .projects-container {
+            margin-top: 3rem;
+        }
+        
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-primary);
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tag {
+            font-size: 0.8rem;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 50px;
+            padding: 0.25rem 0.75rem;
+            color: #a5b4fc;
+        }
+        
+        .project-description {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        .project-link {
+            color: #a5b4fc;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .project-link:hover {
+            color: #818cf8;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .skills-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.1), transparent 70%);
+            z-index: -1;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+        
+        .skill-category-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #a5b4fc;
+        }
+        
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .skill-icon {
+            font-size: 1.2rem;
+            color: #818cf8;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-info {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.1), transparent 70%);
+            z-index: -1;
+        }
+        
+        .contact-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .contact-link {
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-link:hover {
+            color: #a5b4fc;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light-text);
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.3);
+            color: #a5b4fc;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--darker-bg);
+            padding: 3rem 0;
+            margin-top: 6rem;
+            text-align: center;
+        }
+        
+        .footer-text {
+            opacity: 0.7;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                margin-top: 2rem;
+            }
+            
+            h1, .hero-title {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                justify-content: center;
+            }
+            
+            h1, .hero-title {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">Manoj K</div>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#resume" class="nav-link">Resume</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Data Scientist & AI Specialist</h1>
+                <p class="hero-subtitle">Transforming data into intelligent solutions with machine learning, deep learning, and generative AI expertise.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-project-diagram"></i>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Data Scientist with expertise in machine learning, deep learning, and generative AI solutions. Proficient in developing NLP and computer vision applications with a strong foundation in statistical analysis. Skilled in implementing end-to-end ML pipelines from data preprocessing to model deployment.</p>
+                    <p>Demonstrated success in building RAG systems, conversational AI, and computer vision solutions. I combine technical expertise with collaborative skills to translate business requirements into effective data-driven solutions.</p>
+                    <div class="skill-tags">
+                        <div class="skill-tag">Machine Learning</div>
+                        <div class="skill-tag">Deep Learning</div>
+                        <div class="skill-tag">Computer Vision</div>
+                        <div class="skill-tag">NLP</div>
+                        <div class="skill-tag">Generative AI</div>
+                        <div class="skill-tag">RAG</div>
+                        <div class="skill-tag">LLM</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">SQL</div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">ML/DL Models</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">AI Solutions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-container">
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">QA Chatbot for Sales Data</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">RAG</span>
+                                <span class="project-tag">LangChain</span>
+                                <span class="project-tag">LLM</span>
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Created an intelligent chatbot that leverages SQL retrieval and RAG to answer sales-related queries and identify potential sales opportunities.</p>
+                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                                <li>Built SQL retriever with LLM query generation</li>
+                                <li>Integrated with SQLAlchemy for data extraction</li>
+                                <li>Implemented conversation history tracking</li>
+                                <li>Added classification agent for sales opportunity detection</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Vehicle Speed Limit Alert System</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">YOLO</span>
+                                <span class="project-tag">Computer Vision</span>
+                                <span class="project-tag">GPS</span>
+                                <span class="project-tag">Real-time</span>
+                            </div>
+                            <p class="project-description">Developed an intelligent system that monitors vehicle speed, detects surrounding objects, and provides safety alerts based on traffic conditions.</p>
+                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                                <li>Implemented YOLO V8 for vehicle detection</li>
+                                <li>Used stereo vision for depth estimation</li>
+                                <li>Integrated with OpenStreetMap for speed limits</li>
+                                <li>Applied multi-threading for real-time processing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Virtual Try-On Cloth Transformation</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">GAN</span>
+                                <span class="project-tag">Deep Learning</span>
+                                <span class="project-tag">Computer Vision</span>
+                            </div>
+                            <p class="project-description">Built and trained a Generative Adversarial Network to transform clothing items onto person images for virtual try-on applications.</p>
+                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                                <li>Used VTON-HD dataset for training</li>
+                                <li>Experimented with various GAN architectures</li>
+                                <li>Optimized hyperparameters for visual fidelity</li>
+                                <li>Created realistic clothing transformations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Brain Tumor Classification</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">CNN</span>
+                                <span class="project-tag">Medical Imaging</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Developed a CNN-based system for accurate classification of brain tumors from medical imaging data.</p>
+                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                                <li>Collected and preprocessed a comprehensive brain tumor dataset</li>
+                                <li>Applied advanced augmentation techniques</li>
+                                <li>Trained and compared multiple CNN architectures</li>
+                                <li>Deployed solution with Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Education QA Chatbot</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">RAG</span>
+                                <span class="project-tag">LangChain</span>
+                                <span class="project-tag">Vector DB</span>
+                                <span class="project-tag">Ollama</span>
+                            </div>
+                            <p class="project-description">Created an automated RAG-based chatbot for educational content that retrieves relevant information and provides accurate answers.</p>
+                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                                <li>Implemented parent document retriever with FAISS</li>
+                                <li>Integrated with Mistral LLM and local models via Ollama</li>
+                                <li>Added session and history management</li>
+                                <li>Deployed with Flask API</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Legal Text Classification</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">RNN</span>
+                                <span class="project-tag">LSTM</span>
+                                <span class="project-tag">Word2Vec</span>
+                            </div>
+                            <p class="project-description">Developed a system for automated classification of legal documents using advanced NLP techniques.</p>
+                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
+                                <li>Created custom Word2Vec embedding model</li>
+                                <li>Compared RNN, LSTM, BiLSTM and GRU architectures</li>
+                                <li>Implemented preprocessing pipeline for legal text</li>
+                                <li>Achieved high accuracy with BiLSTM model</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Lung Cancer Classification</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">CNN</span>
+                                <span class="project-tag">Medical Imaging</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Trained CNN models to classify lung cancer from MRI images and deployed the application with a Flask API.</p>
+                            <ul>
+                                <li>Performed preprocessing and transformation</li>
+                                <li>Tested multiple CNN architectures</li>
+                                <li>Deployed the final model with Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Body Measurement System</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">MediaPipe</span>
+                                <span class="project-tag">OpenCV</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Designed an image-based body measurement system using pose estimation and geometry for clothing size prediction.</p>
+                            <ul>
+                                <li>Extracted pose keypoints using MediaPipe</li>
+                                <li>Used geometry for body part measurements</li>
+                                <li>Deployed with Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Total Compensation Prediction</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">EDA</span>
+                                <span class="project-tag">Regression</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Built a regression model to predict employee compensation using EDA, feature engineering and Random Forest.</p>
+                            <ul>
+                                <li>Performed data cleaning and transformation</li>
+                                <li>Analyzed using visual EDA</li>
+                                <li>Selected Random Forest model and deployed with Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 10 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Sign Language Classification</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">CNN</span>
+                                <span class="project-tag">Computer Vision</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Developed a CNN-based system to classify hand signs for English alphabets and numbers.</p>
+                            <ul>
+                                <li>Applied data augmentation</li>
+                                <li>Trained custom CNN model</li>
+                                <li>Deployed final model with Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 11 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">OCR for Checkbox and Radio Button</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">EasyOCR</span>
+                                <span class="project-tag">OpenCV</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Built an OCR tool that detects checkbox and radio button selections and extracts associated field text.</p>
+                            <ul>
+                                <li>Used image processing to detect UI elements</li>
+                                <li>Classified check and radio button states</li>
+                                <li>Extracted text using EasyOCR and deployed</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 12 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Air Quality Index Prediction</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">XGBoost</span>
+                                <span class="project-tag">Regression</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Predicted AQI using regression models with XGBoost as final model, deployed via Flask API.</p>
+                            <ul>
+                                <li>Conducted EDA on Kaggle AQI dataset</li>
+                                <li>Evaluated multiple regression models</li>
+                                <li>Deployed with Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 13 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Sentiment Analysis on Movie Reviews</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">Naive Bayes</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Performed sentiment analysis using TF-IDF and Naive Bayes classifier on a movie review dataset.</p>
+                            <ul>
+                                <li>Cleaned text using NLTK</li>
+                                <li>Used TF-IDF vectorizer</li>
+                                <li>Deployed Naive Bayes model</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 14 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Custom Face Recognition System</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">OpenCV</span>
+                                <span class="project-tag">Classification</span>
+                            </div>
+                            <p class="project-description">Created a face recognition system using Haar cascades and trained classifiers for identity prediction.</p>
+                            <ul>
+                                <li>Extracted face features using Haar cascades</li>
+                                <li>Trained multiple classifiers</li>
+                                <li>Selected model with highest accuracy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 15 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Disease Classification System</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">Random Forest</span>
+                                <span class="project-tag">Medical</span>
+                                <span class="project-tag">Flask</span>
+                            </div>
+                            <p class="project-description">Classified diseases from symptoms using a Random Forest model integrated with patient DB management.</p>
+                            <ul>
+                                <li>Built sign-in/sign-up and record tracking system</li>
+                                <li>Stored symptoms and predictions in DB</li>
+                                <li>Deployed the solution with Flask</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Project 16 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Amazon Product Review Word Cloud</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">Visualization</span>
+                            </div>
+                            <p class="project-description">Generated word clouds for Amazon reviews using frequency analysis of cleaned and tokenized text.</p>
+                            <ul>
+                                <li>Collected and cleaned product reviews</li>
+                                <li>Performed frequency analysis</li>
+                                <li>Created visualizations using word cloud</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skills-grid">
+                    <!-- Theory Skills -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Theoretical Foundation</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fas fa-square-root-alt skill-icon"></i>
+                                Statistics
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-dice skill-icon"></i>
+                                Probability
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-superscript skill-icon"></i>
+                                Linear Algebra
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-chart-line skill-icon"></i>
+                                Calculus
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Programming Skills -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Programming</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fab fa-python skill-icon"></i>
+                                Python
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-database skill-icon"></i>
+                                SQL
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- ML/DL Skills -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">ML/DL</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fas fa-robot skill-icon"></i>
+                                Machine Learning
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-brain skill-icon"></i>
+                                Deep Learning
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-eye skill-icon"></i>
+                                Computer Vision
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-image skill-icon"></i>
+                                Image Processing
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-language skill-icon"></i>
+                                Natural Language Processing
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-chart-bar skill-icon"></i>
+                                Data Analysis
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Deployment Skills -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Deployment</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fas fa-server skill-icon"></i>
+                                Flask Deployment
+                            </li>
+                            <li class="skill-item">
+                                <i class="fab fa-git-alt skill-icon"></i>
+                                GIT
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Gen AI Skills -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Generative AI</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fas fa-comments skill-icon"></i>
+                                LLM
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-book-open skill-icon"></i>
+                                RAG
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-terminal skill-icon"></i>
+                                Ollama
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-network-wired skill-icon"></i>
+                                GAN
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-infinity skill-icon"></i>
+                                Diffusion
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Libraries Skills -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Libraries</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fas fa-table skill-icon"></i>
+                                Pandas
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-calculator skill-icon"></i>
+                                NumPy
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-chart-pie skill-icon"></i>
+                                Matplotlib & Seaborn
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-cogs skill-icon"></i>
+                                Scikit-Learn
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-fire skill-icon"></i>
+                                PyTorch
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-camera skill-icon"></i>
+                                OpenCV
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-user-circle skill-icon"></i>
+                                MediaPipe
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-link skill-icon"></i>
+                                LangChain
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-file-alt skill-icon"></i>
+                                EasyOCR & Pytesseract
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out for collaborations, opportunities, or just a chat about data science and AI.</p>
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a href="mailto:manojkaleeshvaran@gmail.com" class="contact-link">manojkaleeshvaran@gmail.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <a href="tel:+919025847629" class="contact-link">+91 9025847629</a>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <span>Thousand Lights, Mount Road, Chennai - 600006</span>
+                        </li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/manoj-k-252b33246" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ManojKalishvaran" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://x.com/mk539892?t=ODVeUsM31audFR9rlBpZLA&s=09" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://medium.com/@manojkaleeshvaran" class="social-link">
+                            <i class="fab fa-medium-m"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form action="https://formspree.io/f/meogngng" method="POST">                        <h3>Send Me a Message</h3>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
+                            <input type="text" id="name" name="name" style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem;">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                            <input type="email" id="email" name="email" style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem;">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
+                            <input type="text" id="subject" name="subject" style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem;">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
+                            <textarea id="message" name="message" rows="5" style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resume Section -->
+    <section id="resume" class="section" id="resume">
+        <div class="container" style="text-align: center;">
+            <h2>My Resume</h2>
+            <p style="margin-bottom: 2rem;">Click to view and download my resume to learn more about my education, experience, and projects.</p>
+            <a href="https://drive.google.com/file/d/1LxJWaYcH-f3-oHzaqhWNX6JEAcd_7qY3/view?usp=drive_link" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Download Resume
+            </a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 Manoj K. All rights reserved.</p>
+            <div class="social-links" style="justify-content: center; margin-top: 1.5rem;">
+                <a href="https://www.linkedin.com/in/manoj-k-252b33246" class="social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/ManojKalishvaran" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/mk539892?t=ODVeUsM31audFR9rlBpZLA&s=09" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://medium.com/@manojkaleeshvaran" class="social-link">
+                    <i class="fab fa-medium-m"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(2, 6, 23, 0.95)';
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                navbar.style.background = 'rgba(15, 23, 42, 0.8)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
