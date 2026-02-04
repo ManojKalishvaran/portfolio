@@ -18,33 +18,33 @@
             --border-radius: 12px;
             --transition: all 0.3s ease;
         }
-        
+       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
-        
+       
         body {
             background-color: var(--dark-bg);
             color: var(--light-text);
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+       
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-        
+       
         /* Typography */
         h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
             line-height: 1.2;
         }
-        
+       
         h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
@@ -53,14 +53,14 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+       
         h2 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
             position: relative;
             display: inline-block;
         }
-        
+       
         h2::after {
             content: '';
             position: absolute;
@@ -71,7 +71,7 @@
             background: var(--gradient-primary);
             border-radius: 2px;
         }
-        
+       
         h3 {
             font-size: 1.75rem;
             margin-bottom: 1rem;
@@ -80,12 +80,12 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+       
         p {
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
-        
+       
         /* Navbar */
         .navbar {
             position: fixed;
@@ -97,13 +97,13 @@
             backdrop-filter: blur(10px);
             padding: 1rem 0;
         }
-        
+       
         .navbar-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+       
         .logo {
             font-size: 2.5rem;
             font-weight: 700;
@@ -112,12 +112,12 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+       
         .nav-links {
             display: flex;
             gap: 2rem;
         }
-        
+       
         .nav-link {
             color: var(--light-text);
             text-decoration: none;
@@ -125,7 +125,7 @@
             transition: var(--transition);
             position: relative;
         }
-        
+       
         .nav-link::after {
             content: '';
             position: absolute;
@@ -136,11 +136,11 @@
             background: var(--gradient-primary);
             transition: var(--transition);
         }
-        
+       
         .nav-link:hover::after {
             width: 100%;
         }
-        
+       
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -149,7 +149,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+       
         .hero::before {
             content: '';
             position: absolute;
@@ -160,29 +160,29 @@
             background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent 70%);
             z-index: -1;
         }
-        
+       
         .hero-content {
             max-width: 800px;
         }
-        
+       
         .hero-title {
             font-size: 4.5rem;
             margin-bottom: 1.5rem;
             line-height: 1.1;
         }
-        
+       
         .hero-subtitle {
             font-size: 1.5rem;
             margin-bottom: 2rem;
             opacity: 0.9;
         }
-        
+       
         .cta-buttons {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
-        
+       
         .btn {
             padding: 0.75rem 1.5rem;
             border-radius: 50px;
@@ -196,53 +196,53 @@
             justify-content: center;
             gap: 0.5rem;
         }
-        
+       
         .btn-primary {
             background: var(--gradient-primary);
             color: white;
             box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
         }
-        
+       
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
         }
-        
+       
         .btn-secondary {
             background: var(--glass-bg);
             color: var(--light-text);
             border: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
         }
-        
+       
         .btn-secondary:hover {
             transform: translateY(-3px);
             background: rgba(255, 255, 255, 0.1);
         }
-        
+       
         /* About Section */
         .section {
             padding: 6rem 0;
         }
-        
+       
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
             align-items: center;
         }
-        
+       
         .about-text {
             position: relative;
         }
-        
+       
         .skill-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.75rem;
             margin-top: 2rem;
         }
-        
+       
         .skill-tag {
             background: var(--glass-bg);
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -251,13 +251,13 @@
             font-size: 0.9rem;
             transition: var(--transition);
         }
-        
+       
         .skill-tag:hover {
             transform: translateY(-3px);
             background: rgba(99, 102, 241, 0.1);
             border-color: rgba(99, 102, 241, 0.3);
         }
-        
+       
         .about-stats {
             background: var(--card-bg);
             border-radius: var(--border-radius);
@@ -267,7 +267,7 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
-        
+       
         .about-stats::before {
             content: '';
             position: absolute;
@@ -278,17 +278,17 @@
             background: radial-gradient(circle at top right, rgba(99, 102, 241, 0.1), transparent 70%);
             z-index: -1;
         }
-        
+       
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
-        
+       
         .stat-item {
             text-align: center;
         }
-        
+       
         .stat-number {
             font-size: 3rem;
             font-weight: 700;
@@ -298,23 +298,23 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+       
         .stat-label {
             font-size: 1rem;
             opacity: 0.7;
         }
-        
+       
         /* Projects Section */
         .projects-container {
             margin-top: 3rem;
         }
-        
+       
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 2rem;
         }
-        
+       
         .project-card {
             background: var(--card-bg);
             border-radius: var(--border-radius);
@@ -324,13 +324,13 @@
             position: relative;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
-        
+       
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             border-color: rgba(99, 102, 241, 0.3);
         }
-        
+       
         .project-card::before {
             content: '';
             position: absolute;
@@ -340,23 +340,23 @@
             height: 5px;
             background: var(--gradient-primary);
         }
-        
+       
         .project-content {
             padding: 2rem;
         }
-        
+       
         .project-title {
             font-size: 1.5rem;
             margin-bottom: 0.75rem;
         }
-        
+       
         .project-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-bottom: 1.5rem;
         }
-        
+       
         .project-tag {
             font-size: 0.8rem;
             background: rgba(99, 102, 241, 0.1);
@@ -364,12 +364,23 @@
             padding: 0.25rem 0.75rem;
             color: #a5b4fc;
         }
-        
+       
         .project-description {
             margin-bottom: 1.5rem;
             opacity: 0.9;
         }
-        
+       
+        .project-highlights {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+       
+        .project-highlights li {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+       
         .project-link {
             color: #a5b4fc;
             text-decoration: none;
@@ -379,11 +390,11 @@
             font-weight: 500;
             transition: var(--transition);
         }
-        
+       
         .project-link:hover {
             color: #818cf8;
         }
-        
+       
         /* Skills Section */
         .skills-container {
             background: var(--card-bg);
@@ -395,7 +406,7 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
-        
+       
         .skills-container::before {
             content: '';
             position: absolute;
@@ -406,39 +417,39 @@
             background: radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.1), transparent 70%);
             z-index: -1;
         }
-        
+       
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 2rem;
         }
-        
+       
         .skill-category {
             margin-bottom: 2rem;
         }
-        
+       
         .skill-category-title {
             font-size: 1.2rem;
             margin-bottom: 1rem;
             color: #a5b4fc;
         }
-        
+       
         .skills-list {
             list-style: none;
         }
-        
+       
         .skill-item {
             display: flex;
             align-items: center;
             gap: 0.75rem;
             margin-bottom: 0.75rem;
         }
-        
+       
         .skill-icon {
             font-size: 1.2rem;
             color: #818cf8;
         }
-        
+       
         /* Contact Section */
         .contact-container {
             display: grid;
@@ -446,7 +457,7 @@
             gap: 3rem;
             margin-top: 3rem;
         }
-        
+       
         .contact-info {
             background: var(--card-bg);
             border-radius: var(--border-radius);
@@ -456,7 +467,7 @@
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
-        
+       
         .contact-info::before {
             content: '';
             position: absolute;
@@ -467,19 +478,19 @@
             background: radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.1), transparent 70%);
             z-index: -1;
         }
-        
+       
         .contact-list {
             list-style: none;
             margin-top: 2rem;
         }
-        
+       
         .contact-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
-        
+       
         .contact-icon {
             width: 40px;
             height: 40px;
@@ -490,23 +501,23 @@
             justify-content: center;
             font-size: 1.2rem;
         }
-        
+       
         .contact-link {
             color: var(--light-text);
             text-decoration: none;
             transition: var(--transition);
         }
-        
+       
         .contact-link:hover {
             color: #a5b4fc;
         }
-        
+       
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 2rem;
         }
-        
+       
         .social-link {
             width: 40px;
             height: 40px;
@@ -520,14 +531,14 @@
             transition: var(--transition);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        
+       
         .social-link:hover {
             transform: translateY(-3px);
             background: rgba(99, 102, 241, 0.1);
             border-color: rgba(99, 102, 241, 0.3);
             color: #a5b4fc;
         }
-        
+       
         /* Footer */
         .footer {
             background: var(--darker-bg);
@@ -535,53 +546,53 @@
             margin-top: 6rem;
             text-align: center;
         }
-        
+       
         .footer-text {
             opacity: 0.7;
         }
-        
+       
         /* Responsive Styles */
         @media (max-width: 992px) {
             .about-grid,
             .contact-container {
                 grid-template-columns: 1fr;
             }
-            
+           
             .about-stats {
                 margin-top: 2rem;
             }
-            
+           
             h1, .hero-title {
                 font-size: 3.5rem;
             }
         }
-        
+       
         @media (max-width: 768px) {
             .navbar-container {
                 flex-direction: column;
                 gap: 1rem;
             }
-            
+           
             .nav-links {
                 justify-content: center;
             }
-            
+           
             h1, .hero-title {
                 font-size: 3rem;
             }
-            
+           
             h2 {
                 font-size: 2rem;
             }
-            
+           
             .project-grid {
                 grid-template-columns: 1fr;
             }
-            
+           
             .skills-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            
+           
             .cta-buttons {
                 flex-direction: column;
             }
@@ -602,13 +613,13 @@
             </div>
         </div>
     </nav>
-    
+   
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Data Scientist & AI Specialist</h1>
-                <p class="hero-subtitle">Transforming data into intelligent solutions with machine learning, deep learning, and generative AI expertise.</p>
+                <h1 class="hero-title">Data Scientist & AI Engineer</h1>
+                <p class="hero-subtitle">Building production-grade machine learning and GenAI systems with expertise in computer vision, NLP, and multi-agent LLM workflows.</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <i class="fas fa-project-diagram"></i>
@@ -622,391 +633,311 @@
             </div>
         </div>
     </section>
-    
+   
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2>About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Data Scientist with expertise in machine learning, deep learning, and generative AI solutions. Proficient in developing NLP and computer vision applications with a strong foundation in statistical analysis. Skilled in implementing end-to-end ML pipelines from data preprocessing to model deployment.</p>
-                    <p>Demonstrated success in building RAG systems, conversational AI, and computer vision solutions. I combine technical expertise with collaborative skills to translate business requirements into effective data-driven solutions.</p>
+                    <p>Data Scientist with 2 years of experience building production-grade machine learning and GenAI systems across computer vision, NLP, and LLM-driven workflows. Strong background in statistical foundations and deep learning, with hands-on experience deploying multi-agent LLM systems, RAG pipelines, and real-time vision models.</p>
+                    <p>Currently working at Colan Infotech Pvt. Ltd., I've quickly onboarded across multiple problem domains, contributing to GenAI, Computer Vision, NLP, and ML solutions. I specialize in translating business workflows into scalable AI/ML solutions that deliver real-world impact.</p>
                     <div class="skill-tags">
-                        <div class="skill-tag">Machine Learning</div>
-                        <div class="skill-tag">Deep Learning</div>
+                        <div class="skill-tag">LLM & AI Agents</div>
+                        <div class="skill-tag">RAG Pipelines</div>
                         <div class="skill-tag">Computer Vision</div>
-                        <div class="skill-tag">NLP</div>
-                        <div class="skill-tag">Generative AI</div>
-                        <div class="skill-tag">RAG</div>
-                        <div class="skill-tag">LLM</div>
+                        <div class="skill-tag">Deep Learning</div>
+                        <div class="skill-tag">MLOps</div>
+                        <div class="skill-tag">AWS SageMaker</div>
+                        <div class="skill-tag">LangChain</div>
+                        <div class="skill-tag">PyTorch</div>
                         <div class="skill-tag">Python</div>
-                        <div class="skill-tag">SQL</div>
                     </div>
                 </div>
                 <div class="about-stats">
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <div class="stat-number">15+</div>
+                            <div class="stat-number">20+</div>
                             <div class="stat-label">Projects Completed</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">1.5+</div>
+                            <div class="stat-number">2</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">10+</div>
+                            <div class="stat-number">15+</div>
                             <div class="stat-label">ML/DL Models</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">3+</div>
-                            <div class="stat-label">AI Solutions</div>
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Production Systems</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+   
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects-container">
                 <div class="project-grid">
-                    <!-- Project 1 -->
+                    <!-- Project 1: Front Desk Platform -->
                     <div class="project-card">
                         <div class="project-content">
-                            <h3 class="project-title">QA Chatbot for Sales Data</h3>
+                            <h3 class="project-title">LLM-Powered Front Desk & Appointment Platform</h3>
                             <div class="project-tags">
+                                <span class="project-tag">LangGraph</span>
+                                <span class="project-tag">AI Agents</span>
                                 <span class="project-tag">RAG</span>
-                                <span class="project-tag">LangChain</span>
                                 <span class="project-tag">LLM</span>
-                                <span class="project-tag">SQL</span>
-                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">Multi-Agent</span>
                             </div>
-                            <p class="project-description">Created an intelligent chatbot that leverages SQL retrieval and RAG to answer sales-related queries and identify potential sales opportunities.</p>
-                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                                <li>Built SQL retriever with LLM query generation</li>
-                                <li>Integrated with SQLAlchemy for data extraction</li>
-                                <li>Implemented conversation history tracking</li>
-                                <li>Added classification agent for sales opportunity detection</li>
+                            <p class="project-description">Architected a workflow-driven, multi-agent AI system for handling organizational queries, appointment booking, rescheduling, and cancellations with stateful conversation management.</p>
+                            <ul class="project-highlights">
+                                <li>Built hybrid RAG and LLM-based knowledge system</li>
+                                <li>Implemented intent classification and modular agent routing</li>
+                                <li>Developed recursive information gathering workflows</li>
+                                <li>Applied LLM guardrails and evaluation middleware</li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <!-- Project 2 -->
+                   
+                    <!-- Project 2: CNC Fault Detection -->
                     <div class="project-card">
                         <div class="project-content">
-                            <h3 class="project-title">Vehicle Speed Limit Alert System</h3>
+                            <h3 class="project-title">Early Fault Detection for CNC Spindle Health</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">AWS MLOps</span>
+                                <span class="project-tag">SageMaker</span>
+                                <span class="project-tag">Autoencoder</span>
+                                <span class="project-tag">Anomaly Detection</span>
+                            </div>
+                            <p class="project-description">Developed an unsupervised anomaly detection system to identify early spindle degradation using edge-aggregated sensor data with production-grade AWS MLOps pipeline.</p>
+                            <ul class="project-highlights">
+                                <li>Trained Dense Autoencoders on stable operating periods</li>
+                                <li>Deployed models on SageMaker endpoints for inference</li>
+                                <li>Implemented maintenance-aware retraining pipeline</li>
+                                <li>Used S3, Lambda, Step Functions, and SNS orchestration</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <!-- Project 3: Aggregate Material Recognition -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Automated Aggregate Material Recognition</h3>
                             <div class="project-tags">
                                 <span class="project-tag">YOLO</span>
+                                <span class="project-tag">CNN</span>
+                                <span class="project-tag">Computer Vision</span>
+                                <span class="project-tag">Real-time</span>
+                            </div>
+                            <p class="project-description">End-to-end vision pipeline to automate material verification in construction aggregate delivery workflows with real-time inference capabilities.</p>
+                            <ul class="project-highlights">
+                                <li>YOLO-based object detection for truck bed localization</li>
+                                <li>CNN classifiers for gravel, stone dust, M-sand, 78 stone</li>
+                                <li>Integrated with LiDAR volume measurement</li>
+                                <li>Optimized for on-site deployment during unloading</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <!-- Project 4: Virtual Try-On -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Virtual Try-On System</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">Diffusion</span>
+                                <span class="project-tag">ControlNet</span>
+                                <span class="project-tag">DW-Pose</span>
+                                <span class="project-tag">Deep Learning</span>
+                            </div>
+                            <p class="project-description">Solved garment alignment and pose consistency challenges using diffusion-based architectures for realistic virtual try-on applications.</p>
+                            <ul class="project-highlights">
+                                <li>Leveraged ControlNet with DW-Pose conditioning</li>
+                                <li>Improved realism through pose-map integration</li>
+                                <li>Optimized prompt engineering and preprocessing</li>
+                                <li>Hands-on experience in diffusion conditioning strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <!-- Project 5: RAG QA Chatbot -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">RAG-Based Sales Data QA Chatbot</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">RAG</span>
+                                <span class="project-tag">LangChain</span>
+                                <span class="project-tag">SQL</span>
+                                <span class="project-tag">LLM</span>
+                                <span class="project-tag">FastAPI</span>
+                            </div>
+                            <p class="project-description">Built a conversational analytics system enabling natural language querying over structured sales data using LLM-generated SQL with safety guardrails.</p>
+                            <ul class="project-highlights">
+                                <li>Schema-aware SQL retrieval with validation</li>
+                                <li>Stateful multi-turn chat workflows</li>
+                                <li>Post-session intent classification for sales prioritization</li>
+                                <li>Production guardrails and evaluation checks</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <!-- Project 6: Research Agent -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Research Agent - Agentic AI</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">AI Agents</span>
+                                <span class="project-tag">LangChain</span>
+                                <span class="project-tag">RAG</span>
+                                <span class="project-tag">NLP</span>
+                            </div>
+                            <p class="project-description">Created a multi-agent research system that retrieves research papers, generates explanations, and enables conversational clarification.</p>
+                            <ul class="project-highlights">
+                                <li>Orchestrated multiple agents with search API</li>
+                                <li>Automated research paper retrieval and summarization</li>
+                                <li>Conversational interface for content clarification</li>
+                                <li>Integrated with academic databases</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <!-- Project 7: Vehicle Speed System -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Vehicle Speed Limit Controller</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">YOLO V8</span>
                                 <span class="project-tag">Computer Vision</span>
                                 <span class="project-tag">GPS</span>
                                 <span class="project-tag">Real-time</span>
                             </div>
-                            <p class="project-description">Developed an intelligent system that monitors vehicle speed, detects surrounding objects, and provides safety alerts based on traffic conditions.</p>
-                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                                <li>Implemented YOLO V8 for vehicle detection</li>
-                                <li>Used stereo vision for depth estimation</li>
-                                <li>Integrated with OpenStreetMap for speed limits</li>
-                                <li>Applied multi-threading for real-time processing</li>
+                            <p class="project-description">Speed monitoring and recommendation system using YOLO detection, depth estimation, and GPS-based speed limit integration.</p>
+                            <ul class="project-highlights">
+                                <li>Lane detection using Canny Edge & Houghline</li>
+                                <li>YOLO V8 vehicle and object detection</li>
+                                <li>Depth estimation for safe speed calculation</li>
+                                <li>Road API integration for speed limits</li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Virtual Try-On Cloth Transformation</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">GAN</span>
-                                <span class="project-tag">Deep Learning</span>
-                                <span class="project-tag">Computer Vision</span>
-                            </div>
-                            <p class="project-description">Built and trained a Generative Adversarial Network to transform clothing items onto person images for virtual try-on applications.</p>
-                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                                <li>Used VTON-HD dataset for training</li>
-                                <li>Experimented with various GAN architectures</li>
-                                <li>Optimized hyperparameters for visual fidelity</li>
-                                <li>Created realistic clothing transformations</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 -->
+                   
+                    <!-- Project 8: Brain Tumor Classification -->
                     <div class="project-card">
                         <div class="project-content">
                             <h3 class="project-title">Brain Tumor Classification</h3>
                             <div class="project-tags">
                                 <span class="project-tag">CNN</span>
                                 <span class="project-tag">Medical Imaging</span>
+                                <span class="project-tag">Deep Learning</span>
                                 <span class="project-tag">Flask</span>
                             </div>
-                            <p class="project-description">Developed a CNN-based system for accurate classification of brain tumors from medical imaging data.</p>
-                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                                <li>Collected and preprocessed a comprehensive brain tumor dataset</li>
-                                <li>Applied advanced augmentation techniques</li>
-                                <li>Trained and compared multiple CNN architectures</li>
-                                <li>Deployed solution with Flask</li>
+                            <p class="project-description">CNN-based system for accurate brain tumor classification from medical imaging data with Flask deployment.</p>
+                            <ul class="project-highlights">
+                                <li>Comprehensive data preprocessing and augmentation</li>
+                                <li>Compared multiple CNN architectures</li>
+                                <li>Optimized for low false negatives</li>
+                                <li>Production-ready Flask API</li>
                             </ul>
                         </div>
                     </div>
-                    
-                    <!-- Project 5 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Education QA Chatbot</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">RAG</span>
-                                <span class="project-tag">LangChain</span>
-                                <span class="project-tag">Vector DB</span>
-                                <span class="project-tag">Ollama</span>
-                            </div>
-                            <p class="project-description">Created an automated RAG-based chatbot for educational content that retrieves relevant information and provides accurate answers.</p>
-                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                                <li>Implemented parent document retriever with FAISS</li>
-                                <li>Integrated with Mistral LLM and local models via Ollama</li>
-                                <li>Added session and history management</li>
-                                <li>Deployed with Flask API</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 6 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Legal Text Classification</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">NLP</span>
-                                <span class="project-tag">RNN</span>
-                                <span class="project-tag">LSTM</span>
-                                <span class="project-tag">Word2Vec</span>
-                            </div>
-                            <p class="project-description">Developed a system for automated classification of legal documents using advanced NLP techniques.</p>
-                            <ul style="list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1.5rem;">
-                                <li>Created custom Word2Vec embedding model</li>
-                                <li>Compared RNN, LSTM, BiLSTM and GRU architectures</li>
-                                <li>Implemented preprocessing pipeline for legal text</li>
-                                <li>Achieved high accuracy with BiLSTM model</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Project 7 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Lung Cancer Classification</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">CNN</span>
-                                <span class="project-tag">Medical Imaging</span>
-                                <span class="project-tag">Flask</span>
-                            </div>
-                            <p class="project-description">Trained CNN models to classify lung cancer from MRI images and deployed the application with a Flask API.</p>
-                            <ul>
-                                <li>Performed preprocessing and transformation</li>
-                                <li>Tested multiple CNN architectures</li>
-                                <li>Deployed the final model with Flask</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Project 8 -->
+                   
+                    <!-- Project 9: Body Measurement -->
                     <div class="project-card">
                         <div class="project-content">
                             <h3 class="project-title">Body Measurement System</h3>
                             <div class="project-tags">
                                 <span class="project-tag">MediaPipe</span>
                                 <span class="project-tag">OpenCV</span>
-                                <span class="project-tag">Flask</span>
-                            </div>
-                            <p class="project-description">Designed an image-based body measurement system using pose estimation and geometry for clothing size prediction.</p>
-                            <ul>
-                                <li>Extracted pose keypoints using MediaPipe</li>
-                                <li>Used geometry for body part measurements</li>
-                                <li>Deployed with Flask</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Project 9 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Total Compensation Prediction</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">EDA</span>
-                                <span class="project-tag">Regression</span>
-                                <span class="project-tag">Flask</span>
-                            </div>
-                            <p class="project-description">Built a regression model to predict employee compensation using EDA, feature engineering and Random Forest.</p>
-                            <ul>
-                                <li>Performed data cleaning and transformation</li>
-                                <li>Analyzed using visual EDA</li>
-                                <li>Selected Random Forest model and deployed with Flask</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Project 10 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Sign Language Classification</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">CNN</span>
                                 <span class="project-tag">Computer Vision</span>
                                 <span class="project-tag">Flask</span>
                             </div>
-                            <p class="project-description">Developed a CNN-based system to classify hand signs for English alphabets and numbers.</p>
-                            <ul>
-                                <li>Applied data augmentation</li>
-                                <li>Trained custom CNN model</li>
-                                <li>Deployed final model with Flask</li>
+                            <p class="project-description">Image-based body measurement system using pose estimation and geometric calculations for clothing size prediction.</p>
+                            <ul class="project-highlights">
+                                <li>Pose keypoint extraction using MediaPipe</li>
+                                <li>Geometric algorithms for body measurements</li>
+                                <li>Image processing with OpenCV</li>
+                                <li>Deployed as Flask web service</li>
                             </ul>
                         </div>
                     </div>
-
-                    <!-- Project 11 -->
+                   
+                    <!-- Project 10: Legal Text Classification -->
                     <div class="project-card">
                         <div class="project-content">
-                            <h3 class="project-title">OCR for Checkbox and Radio Button</h3>
+                            <h3 class="project-title">Legal Text Classification</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">NLP</span>
+                                <span class="project-tag">BiLSTM</span>
+                                <span class="project-tag">Word2Vec</span>
+                                <span class="project-tag">RNN</span>
+                            </div>
+                            <p class="project-description">Automated legal document classification using custom Word2Vec embeddings and BiLSTM architecture.</p>
+                            <ul class="project-highlights">
+                                <li>Custom Word2Vec embedding training</li>
+                                <li>Compared RNN, LSTM, BiLSTM, and GRU</li>
+                                <li>Legal text preprocessing pipeline</li>
+                                <li>High accuracy with BiLSTM model</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <!-- Additional projects in shorter format -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">Education QA Chatbot</h3>
+                            <div class="project-tags">
+                                <span class="project-tag">RAG</span>
+                                <span class="project-tag">LangChain</span>
+                                <span class="project-tag">FAISS</span>
+                                <span class="project-tag">Ollama</span>
+                            </div>
+                            <p class="project-description">RAG-based educational chatbot with parent document retriever, FAISS vector DB, and session management.</p>
+                        </div>
+                    </div>
+                   
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h3 class="project-title">OCR for Forms</h3>
                             <div class="project-tags">
                                 <span class="project-tag">EasyOCR</span>
                                 <span class="project-tag">OpenCV</span>
-                                <span class="project-tag">Flask</span>
+                                <span class="project-tag">Computer Vision</span>
                             </div>
-                            <p class="project-description">Built an OCR tool that detects checkbox and radio button selections and extracts associated field text.</p>
-                            <ul>
-                                <li>Used image processing to detect UI elements</li>
-                                <li>Classified check and radio button states</li>
-                                <li>Extracted text using EasyOCR and deployed</li>
-                            </ul>
+                            <p class="project-description">Checkbox and radio button detection system with field text extraction using image processing and OCR.</p>
                         </div>
                     </div>
-
-                    <!-- Project 12 -->
+                   
                     <div class="project-card">
                         <div class="project-content">
-                            <h3 class="project-title">Air Quality Index Prediction</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">XGBoost</span>
-                                <span class="project-tag">Regression</span>
-                                <span class="project-tag">Flask</span>
-                            </div>
-                            <p class="project-description">Predicted AQI using regression models with XGBoost as final model, deployed via Flask API.</p>
-                            <ul>
-                                <li>Conducted EDA on Kaggle AQI dataset</li>
-                                <li>Evaluated multiple regression models</li>
-                                <li>Deployed with Flask</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Project 13 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Sentiment Analysis on Movie Reviews</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">NLP</span>
-                                <span class="project-tag">Naive Bayes</span>
-                                <span class="project-tag">Flask</span>
-                            </div>
-                            <p class="project-description">Performed sentiment analysis using TF-IDF and Naive Bayes classifier on a movie review dataset.</p>
-                            <ul>
-                                <li>Cleaned text using NLTK</li>
-                                <li>Used TF-IDF vectorizer</li>
-                                <li>Deployed Naive Bayes model</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Project 14 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Custom Face Recognition System</h3>
+                            <h3 class="project-title">Custom Face Recognition</h3>
                             <div class="project-tags">
                                 <span class="project-tag">OpenCV</span>
-                                <span class="project-tag">Classification</span>
+                                <span class="project-tag">Haar Cascade</span>
+                                <span class="project-tag">ML</span>
                             </div>
-                            <p class="project-description">Created a face recognition system using Haar cascades and trained classifiers for identity prediction.</p>
-                            <ul>
-                                <li>Extracted face features using Haar cascades</li>
-                                <li>Trained multiple classifiers</li>
-                                <li>Selected model with highest accuracy</li>
-                            </ul>
+                            <p class="project-description">Face recognition system using Haar cascades for feature extraction and trained classifiers for identity prediction.</p>
                         </div>
                     </div>
-
-                    <!-- Project 15 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Disease Classification System</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">Random Forest</span>
-                                <span class="project-tag">Medical</span>
-                                <span class="project-tag">Flask</span>
-                            </div>
-                            <p class="project-description">Classified diseases from symptoms using a Random Forest model integrated with patient DB management.</p>
-                            <ul>
-                                <li>Built sign-in/sign-up and record tracking system</li>
-                                <li>Stored symptoms and predictions in DB</li>
-                                <li>Deployed the solution with Flask</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Project 16 -->
-                    <div class="project-card">
-                        <div class="project-content">
-                            <h3 class="project-title">Amazon Product Review Word Cloud</h3>
-                            <div class="project-tags">
-                                <span class="project-tag">NLP</span>
-                                <span class="project-tag">Visualization</span>
-                            </div>
-                            <p class="project-description">Generated word clouds for Amazon reviews using frequency analysis of cleaned and tokenized text.</p>
-                            <ul>
-                                <li>Collected and cleaned product reviews</li>
-                                <li>Performed frequency analysis</li>
-                                <li>Created visualizations using word cloud</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    
+                   
                 </div>
             </div>
         </div>
     </section>
-    
+   
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
             <h2>Technical Skills</h2>
             <div class="skills-container">
                 <div class="skills-grid">
-                    <!-- Theory Skills -->
+                    <!-- Programming -->
                     <div class="skill-category">
-                        <h4 class="skill-category-title">Theoretical Foundation</h4>
-                        <ul class="skills-list">
-                            <li class="skill-item">
-                                <i class="fas fa-square-root-alt skill-icon"></i>
-                                Statistics
-                            </li>
-                            <li class="skill-item">
-                                <i class="fas fa-dice skill-icon"></i>
-                                Probability
-                            </li>
-                            <li class="skill-item">
-                                <i class="fas fa-superscript skill-icon"></i>
-                                Linear Algebra
-                            </li>
-                            <li class="skill-item">
-                                <i class="fas fa-chart-line skill-icon"></i>
-                                Calculus
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Programming Skills -->
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">Programming</h4>
+                        <h4 class="skill-category-title">Programming Languages</h4>
                         <ul class="skills-list">
                             <li class="skill-item">
                                 <i class="fab fa-python skill-icon"></i>
@@ -1018,10 +949,10 @@
                             </li>
                         </ul>
                     </div>
-                    
-                    <!-- ML/DL Skills -->
+                   
+                    <!-- ML/DL -->
                     <div class="skill-category">
-                        <h4 class="skill-category-title">ML/DL</h4>
+                        <h4 class="skill-category-title">ML / DL</h4>
                         <ul class="skills-list">
                             <li class="skill-item">
                                 <i class="fas fa-robot skill-icon"></i>
@@ -1029,96 +960,85 @@
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-brain skill-icon"></i>
-                                Deep Learning
+                                Deep Learning (ANN, CNN, RNN, LSTM, YOLO)
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-eye skill-icon"></i>
                                 Computer Vision
                             </li>
                             <li class="skill-item">
-                                <i class="fas fa-image skill-icon"></i>
-                                Image Processing
-                            </li>
-                            <li class="skill-item">
                                 <i class="fas fa-language skill-icon"></i>
-                                Natural Language Processing
+                                NLP
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-chart-bar skill-icon"></i>
                                 Data Analysis
                             </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Deployment Skills -->
-                    <div class="skill-category">
-                        <h4 class="skill-category-title">Deployment</h4>
-                        <ul class="skills-list">
                             <li class="skill-item">
-                                <i class="fas fa-server skill-icon"></i>
-                                Flask Deployment
-                            </li>
-                            <li class="skill-item">
-                                <i class="fab fa-git-alt skill-icon"></i>
-                                GIT
+                                <i class="fas fa-cogs skill-icon"></i>
+                                MLOps & CI-CD
                             </li>
                         </ul>
                     </div>
-                    
-                    <!-- Gen AI Skills -->
+                   
+                    <!-- Gen AI -->
                     <div class="skill-category">
                         <h4 class="skill-category-title">Generative AI</h4>
                         <ul class="skills-list">
                             <li class="skill-item">
                                 <i class="fas fa-comments skill-icon"></i>
-                                LLM
+                                LLMs
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-book-open skill-icon"></i>
                                 RAG
                             </li>
                             <li class="skill-item">
-                                <i class="fas fa-terminal skill-icon"></i>
-                                Ollama
+                                <i class="fas fa-users skill-icon"></i>
+                                AI Agents & Multi-Agent Workflows
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-network-wired skill-icon"></i>
-                                GAN
+                                GANs
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-infinity skill-icon"></i>
-                                Diffusion
+                                Diffusion Models
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-terminal skill-icon"></i>
+                                Ollama, MCP
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-layer-group skill-icon"></i>
+                                Fine Tuning & LoRA
                             </li>
                         </ul>
                     </div>
-                    
-                    <!-- Libraries Skills -->
+                   
+                    <!-- Frameworks & Libraries -->
                     <div class="skill-category">
-                        <h4 class="skill-category-title">Libraries</h4>
+                        <h4 class="skill-category-title">Frameworks & Libraries</h4>
                         <ul class="skills-list">
-                            <li class="skill-item">
-                                <i class="fas fa-table skill-icon"></i>
-                                Pandas
-                            </li>
-                            <li class="skill-item">
-                                <i class="fas fa-calculator skill-icon"></i>
-                                NumPy
-                            </li>
-                            <li class="skill-item">
-                                <i class="fas fa-chart-pie skill-icon"></i>
-                                Matplotlib & Seaborn
-                            </li>
-                            <li class="skill-item">
-                                <i class="fas fa-cogs skill-icon"></i>
-                                Scikit-Learn
-                            </li>
                             <li class="skill-item">
                                 <i class="fas fa-fire skill-icon"></i>
                                 PyTorch
                             </li>
                             <li class="skill-item">
+                                <i class="fas fa-cogs skill-icon"></i>
+                                Scikit-learn
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-table skill-icon"></i>
+                                Pandas, NumPy
+                            </li>
+                            <li class="skill-item">
                                 <i class="fas fa-camera skill-icon"></i>
                                 OpenCV
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-face-smile skill-icon"></i>
+                                HuggingFace, Diffusers
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-user-circle skill-icon"></i>
@@ -1126,19 +1046,77 @@
                             </li>
                             <li class="skill-item">
                                 <i class="fas fa-link skill-icon"></i>
-                                LangChain
+                                LangChain, LangGraph
                             </li>
                             <li class="skill-item">
-                                <i class="fas fa-file-alt skill-icon"></i>
-                                EasyOCR & Pytesseract
+                                <i class="fas fa-chart-line skill-icon"></i>
+                                LangSmith, LangFuse
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-users-cog skill-icon"></i>
+                                CrewAI, FastMCP
                             </li>
                         </ul>
                     </div>
+                   
+                    <!-- Web & APIs -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Web & APIs</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fas fa-rocket skill-icon"></i>
+                                FastAPI
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-flask skill-icon"></i>
+                                Flask
+                            </li>
+                        </ul>
+                    </div>
+                   
+                    <!-- Cloud & DevOps -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Cloud & MLOps</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fab fa-aws skill-icon"></i>
+                                AWS, Azure
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-brain skill-icon"></i>
+                                AWS SageMaker
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-cloud skill-icon"></i>
+                                Azure ML
+                            </li>
+                            <li class="skill-item">
+                                <i class="fab fa-git-alt skill-icon"></i>
+                                GIT, GitHub
+                            </li>
+                        </ul>
+                    </div>
+                   
+                    <!-- OCR -->
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">OCR & Others</h4>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <i class="fas fa-file-alt skill-icon"></i>
+                                EasyOCR
+                            </li>
+                            <li class="skill-item">
+                                <i class="fas fa-font skill-icon"></i>
+                                Tesseract
+                            </li>
+                        </ul>
+                    </div>
+                   
                 </div>
             </div>
         </div>
     </section>
-    
+   
     <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
@@ -1146,7 +1124,7 @@
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Contact Information</h3>
-                    <p>Feel free to reach out for collaborations, opportunities, or just a chat about data science and AI.</p>
+                    <p>Feel free to reach out for collaborations, opportunities, or discussions about data science, AI, and machine learning projects.</p>
                     <ul class="contact-list">
                         <li class="contact-item">
                             <div class="contact-icon">
@@ -1168,29 +1146,30 @@
                         </li>
                     </ul>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/manoj-k-252b33246" class="social-link">
+                        <a href="https://www.linkedin.com/in/manoj-k-252b33246" class="social-link" target="_blank">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="https://github.com/ManojKalishvaran" class="social-link">
+                        <a href="https://github.com/ManojKalishvaran" class="social-link" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://x.com/mk539892?t=ODVeUsM31audFR9rlBpZLA&s=09" class="social-link">
+                        <a href="https://x.com/mk539892?t=ODVeUsM31audFR9rlBpZLA&s=09" class="social-link" target="_blank">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://medium.com/@manojkaleeshvaran" class="social-link">
+                        <a href="https://medium.com/@manojkaleeshvaran" class="social-link" target="_blank">
                             <i class="fab fa-medium-m"></i>
                         </a>
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <form action="https://formspree.io/f/meogngng" method="POST">                        <h3>Send Me a Message</h3>
+                    <form action="https://formspree.io/f/meogngng" method="POST" style="background: var(--card-bg); border-radius: var(--border-radius); border: 1px solid rgba(255, 255, 255, 0.05); padding: 3rem; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);">
+                        <h3>Send Me a Message</h3>
                         <div style="margin-bottom: 1.5rem;">
                             <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
-                            <input type="text" id="name" name="name" style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem;">
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem;">
                         </div>
                         <div style="margin-bottom: 1.5rem;">
                             <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
-                            <input type="email" id="email" name="email" style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem;">
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem;">
                         </div>
                         <div style="margin-bottom: 1.5rem;">
                             <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Subject</label>
@@ -1198,65 +1177,63 @@
                         </div>
                         <div style="margin-bottom: 1.5rem;">
                             <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
-                            <textarea id="message" name="message" rows="5" style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem; resize: vertical;"></textarea>
+                            <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; background: var(--glass-bg); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; color: var(--light-text); font-size: 1rem; resize: vertical;"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
                     </form>
-
-
                 </div>
             </div>
         </div>
     </section>
-    
+   
     <!-- Resume Section -->
-    <section id="resume" class="section" id="resume">
+    <section id="resume" class="section">
         <div class="container" style="text-align: center;">
             <h2>My Resume</h2>
-            <p style="margin-bottom: 2rem;">Click to view and download my resume to learn more about my education, experience, and projects.</p>
-            <a href="https://drive.google.com/file/d/1LxJWaYcH-f3-oHzaqhWNX6JEAcd_7qY3/view?usp=drive_link" class="btn btn-primary">
+            <p style="margin-bottom: 2rem;">Download my resume to learn more about my professional experience, technical skills, and project portfolio.</p>
+            <a href="https://drive.google.com/file/d/1hBiTQyMBun9Q4wm1nQArRQUgPUfVkGBT/view?usp=sharing">
                 <i class="fas fa-download"></i>
                 Download Resume
             </a>
         </div>
     </section>
-    
+   
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p class="footer-text">© 2025 Manoj K. All rights reserved.</p>
             <div class="social-links" style="justify-content: center; margin-top: 1.5rem;">
-                <a href="https://www.linkedin.com/in/manoj-k-252b33246" class="social-link">
+                <a href="https://www.linkedin.com/in/manoj-k-252b33246" class="social-link" target="_blank">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/ManojKalishvaran" class="social-link">
+                <a href="https://github.com/ManojKalishvaran" class="social-link" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://x.com/mk539892?t=ODVeUsM31audFR9rlBpZLA&s=09" class="social-link">
+                <a href="https://x.com/mk539892?t=ODVeUsM31audFR9rlBpZLA&s=09" class="social-link" target="_blank">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://medium.com/@manojkaleeshvaran" class="social-link">
+                <a href="https://medium.com/@manojkaleeshvaran" class="social-link" target="_blank">
                     <i class="fab fa-medium-m"></i>
                 </a>
             </div>
         </div>
     </footer>
-    
+   
     <script>
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+               
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-        
+       
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');
